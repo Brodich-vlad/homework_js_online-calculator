@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашня робота JS №11 Влад Бродич</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/animation.css">
+    <link rel="stylesheet" href="./style/main_style.css">
+</head>
+<body>
+    <div class="main-page" id="main-page">
+        <header>
+            <div class="header">
+                <nav class="header-nav">
+                    <a class="logo" href="./">
+                        <img src="./imege/logo.jpg" alt="logo" width="60">
+                    </a>
+                    <div class="dropdown">
+                        <button id="btnShowMenu" class="dropbtn">Меню</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a class="link-focus" href="#main">Головна</a>
+                            <a class="link-focus" href="#work-1">Калькулятор</a>
+                            <a class="link-focus" href="#partners">Партнери</a>
+                            <a class="link-focus" href="#contacts">Контакти</a>
+                        </div>
+                    </div>   
+                </nav>
+            </div>
+        </header>
+        <main class="main" id="main">
+            <!-- Сукція "Домашні роботи" -->
+            <section class="works work-1" id="work-1">
+                <h1>Домашня робота JS №11 Події в DOM-дереві.</h1> 
+                <div class="work-2">
+                    <h2>Завдання калькулятор</h2>
+                    <p>* У папці calculator дана верстка макета калькулятора.<br>Потрібно зробити цей калькулятор робочим.<br>* При натисканні на клавіші з цифрами - набір введених цифр має бути показаний на табло калькулятора.<br>* При натисканні на знаки операторів (`*`, `/`, `+`, `-`) на табло нічого не відбувається - програма чекає введення другого числа для виконання операції.<br>* Якщо користувач ввів одне число, вибрав оператор і ввів друге число, то при натисканні як кнопки `=`, так і будь-якого з операторів, в табло повинен з'явитися результат виконання попереднього виразу.<br>* При натисканні клавіш `M+` або `M-` у лівій частині табло необхідно показати маленьку букву `m` - це означає, що в пам'яті зберігається число.<br> Натискання на MRC покаже число з пам'яті на екрані. Повторне натискання `MRC` має очищати пам'ять.
+                    </p> 
+                    <div class="box">
+                        <div class="display">
+                            <!-- Основний дісплей -->
+                            <input id="show-display" type="text" readonly size="18" disabled>
+                            <!-- Службовий дісплей -->
+                            <input id="show-sekond-display" type="text" readonly size="3" disabled>
+                        </div>
+                        <div class="keys" id="keys">
+                          <p>
+                            <input type="button" class="button gray" value="mrc">
+                            <input type="button" class="button gray" value="m-">
+                            <input type="button" class="button gray" value="m+">
+                            <button type="button" class="button pink" value="/">÷</button>
+                          </p>
+                          <p>
+                            <input type="button" class="button black" value="7">
+                            <input type="button" class="button black" value="8">
+                            <input type="button" class="button black" value="9">
+                            <button type="button" class="button pink" value="*">×</button>
+                          </p>
+                          <p>
+                            <input type="button" class="button black" value="4">
+                            <input type="button" class="button black" value="5">
+                            <input type="button" class="button black" value="6">
+                            <button type="button" class="button pink" value="-">&#8722;</button>
+                          </p>
+                          <p>
+                            <input type="button" class="button black" value="1">
+                            <input type="button" class="button black" value="2">
+                            <input type="button" class="button black" value="3">
+                            <input type="button" class="button pink" value="+">
+                          </p>
+                          <p>
+                            <input type="button" class="button black" value="0">
+                            <input type="button" class="button black" value=".">
+                            <button type="button" class="button black" value="C">On/C</button>
+                            <input type="button" class="button orange" id="equal" value="=" disabled>
+                          </p>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <!-- Секція "Партнери". -->
+            <section class="partners" id="partners">
+                <h2>Наші захисники та партнери</h2>
+                <ul class="slider-show-container">
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/mi-z-ukraini.jpg" alt="Добрий вечір ми з України" >
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/image_1.png" alt="Україна переможе">
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/image_2.png" alt="руский кораблик иди на ...">
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/image_3.jpg" alt="Україна">
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/image_4.png" alt="Вірю в ЗСУ. Вірю в перемогу">
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/image-bpcm.png" alt="БРСМ">
+                        <p class="text">Дякую компанії "БРСМ" за бескоштовний доступ до мережі інтернет.</p>
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                    <li class="slide fade">
+                        <img src="./imege/img_sliider/viru-v-zsu.jpg" alt="Вірю в ЗСУ." >
+                        <p class="text">Дякую ЗСУ за мирне небо, <br> за можливість жити, працювати та навчатись.</p>
+                        <p class="alt-text">Нажаль картинка не завантажилась.</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div class="footer" id="contacts">
+                <ul>
+                    <li>
+                        <a class="footer-link link-focus" href="./">Влад Бродич</a>
+                    </li>
+                    <li>
+                        <a class="footer-link link-focus" href="mailto:brodich_vlad@ukr.net">Пошта: brodich_vlad@ukr.net</a>
+                    </li>
+                    <li>
+                        <a class="footer-link link-focus" href="tel:+380677606508">Телефон: 067-760-65-08</a>
+                    </li>
+                </ul>
+                <div class="time">3 Лютого 2023 рік.</div>
+            </div>
+        </footer>
+        <a class="link-bth-up" href="#"><!--Кнопка до гори-->
+            <svg class="bth-up" width="80" height="80" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50.5" cy="50.5" r="50.5" fill="#555768" fill-opacity="0.62"/>
+                <path d="M50.5 28.8572L38.953 48.8572H62.047L50.5 28.8572ZM52.5 72.1429V46.8572H48.5V72.1429H52.5Z" fill="white"/>
+                </svg>
+        </a>
+    </div>
+    <script src="./code/main_code.js"></script>
+    <script src="./code/homework_calculator.js"></script>
+</body>
+</html>
